@@ -1,0 +1,51 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+
+{% block main %}
+
+<!-- <form action="/register" method="post">
+    <div class="mb-3">
+        <input type="text" autocomplete="off" autofocus class="form-control mx-auto w-auto" name="username" placeholder="Username">
+    </div>
+    <div class="mb-3">
+        <input type="password" class="form-control mx-auto w-auto" name="password" placeholder="Password">
+    </div>
+    <div class="mb-3">
+        <input type="password" class="form-control mx-auto w-auto" name="confirmation" placeholder="Re-enter Password">
+    </div>
+    <button class="btn btn-primary" type="submit">Register</button>
+</form> -->
+
+<div class="modal modal-signin position-static d-block py-5" tabindex="-1" role="dialog" id="modalSignin">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content rounded-4 shadow">
+        <div class="modal-header p-5 pb-4 border-bottom-0">
+          <h2 class="fw-bold mx-auto mb-0">Register</h2>
+        </div>
+  
+        <div class="modal-body p-5 pt-0">
+          <form class="" action="/register" method="post">
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control rounded-3" id="floatingInput" name="username" placeholder="Username" autocomplete="off" autofocus>
+              <label for="floatingInput">Username</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control rounded-3" name="password" id="floatingPassword" placeholder="Password">
+              <label for="floatingPassword">Password</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control rounded-3" name="confirmation" id="floatingPassword" placeholder="Re-enter Password">
+                <label for="floatingPassword">Re-enter Password</label>
+              </div>
+            <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Sign Up</button>
+            <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>
+{% endblock %}

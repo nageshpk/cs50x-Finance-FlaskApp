@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% block title %}
+    Buy
+{% endblock %}
+
+{% block main %}
+
+<div class="modal modal-signin position-static d-block py-5" tabindex="-1" role="dialog" id="modalSignin">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content rounded-4 shadow">
+        <div class="modal-body p-5 pt-0">
+          <form class="" action="/buy" method="post">
+            <div class="mb-3">
+                <input type="text" autocomplete="off" autofocus class="form-control rounded-3 mx-auto w-auto" name="symbol" placeholder="Symbol">
+            </div>
+            <div class="mb-3">
+                <input type="number" class="form-control rounded-3 mx-auto w-auto" name="shares" placeholder="Shares">
+            </div>
+            <button class="btn rounded-3 btn-primary" type="submit">Buy</button>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>
+
+{% endblock %}

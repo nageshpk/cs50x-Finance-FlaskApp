@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+{% block title %}
+    History
+{% endblock %}
+
+
+{% block main %}
+
+<table class="table align-middle mb-0 bg-white">
+    <thead class="bg-light">
+        <tr>
+            <th>Symbol</th>
+            <th>Shares</th>
+            <th>Price</th>
+            <th>buy/sell</th>
+            <th>Transacted</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in data %}
+        <tr scope="row">
+            <td>{{ row[2] }}</td>
+            <td>{{ row[5] }}</td>
+            <td>{{ row[3] | usd }}</td>
+            {% if row[5] < 0 %}
+            <td>sell</td>
+            {% else %}
+            <td>buy</td>
+            {% endif %}
+            <td>{{ row[4] }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

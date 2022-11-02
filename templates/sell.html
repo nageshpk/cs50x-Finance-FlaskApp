@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+{% block title %}
+    sell
+{% endblock %}
+
+
+{% block main %}
+
+<div class="modal modal-signin position-static d-block py-5" tabindex="-1" role="dialog" id="modalSignin">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content rounded-4 shadow">
+        <div class="modal-body p-5 pt-0">
+          <form class="" action="/sell" method="post">
+            <div class="d-flex gap-5 justify-content-center mb-3">
+                <select class="btn dropdown dropdown-menu position-static d-grid gap-1 p-2 rounded-3 mx-0 shadow w-220px" name="symbol">
+                    <option class="dropdown-item rounded-2" disabled selected>Symbol</option>
+                    {% for option in options %}
+                    <option class="dropdown-item rounded-2" value="{{ option }}">{{ option }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="mb-3">
+                <input type="number" class="form-control rounded-3 mx-auto w-auto" name="shares" placeholder="Shares">
+            </div>
+            <button class="btn rounded-3 btn-primary" type="submit">Sell</button>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>
+
+{% endblock %}

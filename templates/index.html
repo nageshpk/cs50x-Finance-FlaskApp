@@ -1,0 +1,60 @@
+{% extends 'layout.html' %}
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body text-center">
+                <h5 class="card-title m-b-0">Portfolio</h5>
+            </div>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col">Symbol</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Shares</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody class="customtable">
+                            {% for row in data %}
+                            {% if row[2] > 0 %}
+                                <tr>
+                                    <td>{{ row[0] }}</td>
+                                    <td>{{ row[1] }}</td>
+                                    <td>{{ row[2] }}</td>
+                                    <td>{{ row[3] | usd }}</td>
+                                    <td>{{ (row[2] * row[3]) | usd}}</td>
+                                </tr>
+                            {% endif %}
+                            {% endfor %}
+                        </tbody>
+                        <tfoot>
+                            <tr scope="row">
+                                <td class="border-0"></td>
+                                <td class="border-0"></td>
+                                <td class="border-0"></td>
+                                <td class="border-0 fw-bold">Cash</td>
+                                <td class="border-0">{{ cash | usd }}</td>
+                            </tr>
+                            <tr scope="row">
+                                <td class="border-0"></td>
+                                <td class="border-0"></td>
+                                <td class="border-0"></td>
+                                <td class="border-0 fw-bold">Total value</td>
+                                <td class="border-0">{{ (cash + total) | usd }}</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
