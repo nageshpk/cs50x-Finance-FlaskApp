@@ -7,8 +7,13 @@
 
 ![image](https://user-images.githubusercontent.com/38485662/199548453-f183d633-5616-4539-87af-9229c5fcd7ae.png)
 
-- Here a sqlite database is created locally for that you need to install [sqlite3](https://www.sqlite.org/download.html) on your machine.
+- Here a sqlite database is created locally for that you need to install [sqlite3](https://www.sqlite.org/download.html) on your machine,
 and import the sqlite3 module to run the queries.
+
+#### Screenshots
+
+- ![image](https://user-images.githubusercontent.com/38485662/199657785-b5a9246d-1372-4701-8be0-bb82d7090298.png)
+
 
 #### To run this on local machine 
 
@@ -36,3 +41,10 @@ cd <folder name>
 FLASK_APP = app.py
 flask run
 ```
+
+##### Built using
+
+- HTML5, CSS3, Bootstrap
+- Python
+- Flask web framework, flask session
+- sqlite database
