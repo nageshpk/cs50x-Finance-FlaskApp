@@ -7,3 +7,8 @@ You do not need to import SQL module from CS50.
 
 ![image](https://user-images.githubusercontent.com/38485662/199548453-f183d633-5616-4539-87af-9229c5fcd7ae.png)
 
+#### To run this on local machine run these commands in your terminal
+'''
+git clone <repo url>
+cd <repo name>
+'''
