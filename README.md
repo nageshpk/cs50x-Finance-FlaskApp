@@ -12,7 +12,10 @@ and import the sqlite3 module to run the queries.
 
 #### Screenshots
 
-- ![image](https://user-images.githubusercontent.com/38485662/199657785-b5a9246d-1372-4701-8be0-bb82d7090298.png)
+![image](https://user-images.githubusercontent.com/38485662/199657785-b5a9246d-1372-4701-8be0-bb82d7090298.png)
+![image](https://user-images.githubusercontent.com/38485662/199658084-6364fe20-8fc8-40e6-b789-dd0871b776d9.png)
+![image](https://user-images.githubusercontent.com/38485662/199658121-18bde057-92ee-4dcc-85f8-442a02723592.png)
+
 
 
 #### To run this on local machine 
