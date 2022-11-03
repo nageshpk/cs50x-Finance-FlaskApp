@@ -44,6 +44,10 @@ cd <folder name>
 FLASK_APP = app.py
 flask run
 ```
+##### Copy the IP address from terminal and paste in the web browser
+```
+Running on http://127.0.0.1:5000
+```
 
 ##### Built using
 
